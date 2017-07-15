@@ -1,0 +1,24 @@
+default['sql_server']['mnt_drive']          = 'T:'
+default['sql_server']['setup_exe']          = 'setup.exe'
+default['sql_server']['share_path']         = '\\\\10.10.0.2\software\Microsoft\MSSQL2008R2'
+default['sql_server']['share_user']         = "guest"
+default['sql_server']['share_pass']         = ""
+default['sql_server']['iso_file']           = "MSSQL2008R2.iso.iso"
+
+default['sql_server']['install_dir']        = 'C:\Program Files\Microsoft SQL Server'
+default['sql_server']['port']               = 1433
+default['sql_server']['instance_name']      = 'SQLEXPRESS'
+default['sql_server']['instance_dir']       = 'C:\Program Files\Microsoft SQL Server'
+default['sql_server']['shared_wow_dir']     = 'C:\Program Files (x86)\Microsoft SQL Server'
+default['sql_server']['feature_list']       = 'SQLENGINE,REPLICATION,SSMS,ADV_SSMS,SNAC_SDK' #'SQLENGINE,REPLICATION,SNAC_SDK'
+default['sql_server']['agent_account']      = 'NT AUTHORITY\NETWORK SERVICE'
+default['sql_server']['agent_startup']      = 'Disabled'
+default['sql_server']['rs_mode']            = 'FilesOnlyMode'
+default['sql_server']['rs_account']         = 'NT AUTHORITY\NETWORK SERVICE'
+default['sql_server']['rs_startup']         = 'Automatic'
+default['sql_server']['browser_startup']    = 'Automatic'
+default['sql_server']['sysadmins']          = 'Administrator'
+default['sql_server']['sql_account']        = 'NT AUTHORITY\NETWORK SERVICE'
+default['sql_server']['server_sa_password'] = "SqlServer123!"
+default['sql_server']['sys_user']           = "Administrator"
+default['sql_server']['sys_pass']           = "1Q2w3e4r5t"

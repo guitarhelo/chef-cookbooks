@@ -1,0 +1,4 @@
+E:\software\SW_DVD5_VS_Ultimate_2012_English_Core_MLF_X18-35820
+
+
+vs_ultimate.exe /Silent /NoRestart /Log  c:\\vs_install.log /NoWeb /Full  /CustomInstallPath  /ProductKey 

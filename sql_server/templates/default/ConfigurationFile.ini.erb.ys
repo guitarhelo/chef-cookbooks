@@ -1,0 +1,148 @@
+<% if node['sql_server']['version'] == '2012' %>
+[OPTIONS]
+<% else %>
+[SQLSERVER2008]
+<% end %>
+
+
+IACCEPTSQLSERVERLICENSETERMS="<%= node['sql_server']['accept_eula'] ? "True" : "False" %>"
+
+<% unless (node['sql_server']['product_key'].nil? || node['sql_server']['product_key'].empty?)  -%>
+
+PID="<%= node['sql_server']['product_key'] %>"
+<% end -%>
+
+SECURITYMODE="SQL"
+SAPWD="<%= node['sql_server']['server_sa_password'] %>"
+
+
+INSTANCEID="<%= node['sql_server']['instance_name'] %>"
+
+
+ACTION="Install"
+
+
+FEATURES=<%= node['sql_server']['feature_list'] %>
+
+
+HELP="False"
+
+
+INDICATEPROGRESS="False"
+
+
+QUIET="False"
+
+
+QUIETSIMPLE="False"
+
+
+X86="False"
+
+
+ROLE="AllFeatures_WithDefaults"
+
+
+ENU="True"
+
+
+
+ERRORREPORTING="False"
+
+
+INSTALLSHAREDDIR="<%= node['sql_server']['install_dir'] %>"
+
+<% if node['kernel']['machine'] =~ /x86_64/ %>
+
+INSTALLSHAREDWOWDIR="<%= node['sql_server']['shared_wow_dir'] %>"
+<% end %>
+
+
+INSTANCEDIR="<%= node['sql_server']['instance_dir'] %>"
+
+
+SQMREPORTING="False"
+
+
+INSTANCENAME="<%= node['sql_server']['instance_name'] %>"
+
+
+AGTSVCACCOUNT="<%= node['sql_server']['agent_account'] %>"
+
+
+AGTSVCSTARTUPTYPE="<%= node['sql_server']['agent_startup'] %>"
+
+
+ISSVCSTARTUPTYPE="Automatic"
+
+
+ISSVCACCOUNT="NT AUTHORITY\NetworkService"
+
+
+ASSVCSTARTUPTYPE="Automatic"
+
+ASSVCACCOUNT="NT AUTHORITY\NetworkService"
+
+
+ASCOLLATION="Latin1_General_CI_AS"
+
+
+ASDATADIR="Data"
+
+
+ASLOGDIR="Log"
+
+
+ASBACKUPDIR="Backup"
+
+
+ASTEMPDIR="Temp"
+
+
+ASCONFIGDIR="Config"
+
+
+ASPROVIDERMSOLAP="1"
+
+
+
+SQLSVCSTARTUPTYPE="Automatic"
+
+
+FILESTREAMLEVEL="0"
+
+
+ENABLERANU="<%= node['sql_server']['instance_name'] == 'SQLEXPRESS' ? "True" : "False" %>"
+
+
+SQLCOLLATION="SQL_Latin1_General_CP1_CI_AS"
+
+SQLSVCSTARTUPTYPE="Automatic"
+SQLSVCACCOUNT="<%= node['sql_server']['sql_account'] %>"
+
+
+SQLSYSADMINACCOUNTS="<%= node['sql_server']['sysadmins'] %>"
+FARMADMINPORT="0"
+
+ADDCURRENTUSERASSQLADMIN="<%= node['sql_server']['instance_name'] == 'SQLEXPRESS' ? "True" : "False" %>"
+
+
+TCPENABLED="1"
+
+FILESTREAMLEVEL="0"
+NPENABLED="0"
+
+
+BROWSERSVCSTARTUPTYPE="<%= node['sql_server']['browser_startup'] %>"
+
+
+RSSVCACCOUNT="<%= node['sql_server']['rs_account'] %>"
+
+
+RSSVCSTARTUPTYPE="<%= node['sql_server']['rs_startup'] %>"
+
+
+RSINSTALLMODE="<%= node['sql_server']['rs_mode'] %>"
+
+FTSVCACCOUNT="NT AUTHORITY\LOCAL SERVICE"
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HPOOInstallInput>
+<Action value="install"/>
+<Lang id="en"/>
+<XMLOutput value="CentralOutputFile.xml"/>
+<InstallationLang>
+<Language value="English"/>
+<Fail_upgrade_if_different_lang value="false"/>
+</InstallationLang>
+<NetworkSettings>
+<CentralHostName value="<%= node['hpoo9']['central']['host'] %>"/>
+<CentralHTTPPortNumber value="<%= node['hpoo9']['central']['http_port'] %>"/>
+<CentralHTTPSPortNumber value="<%= node['hpoo9']['central']['https_port'] %>"/>
+<BroadcastAddress value="<%= node['hpoo9']['central']['brdcast_ip'] %>"/>
+</NetworkSettings>
+<DatabaseInformations>
+<DatabaseType value="<%= node['hpoo9']['db']['type'] %>"/>
+<DatabaseHost value="<%= node['hpoo9']['db']['host'] %>"/>
+<DatabasePort value="<%= node['hpoo9']['db']['port'] %>"/>
+<DatabaseName value="<%= node['hpoo9']['db']['name'] %>"/>
+<DatabaseUser value="<%= node['hpoo9']['db']['user'] %>"/>
+<DatabaseUserDomain value=""/>
+<CreateOrRecreateSchema value="true"/>
+</DatabaseInformations>
+</HPOOInstallInput>

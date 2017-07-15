@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HPOOStudioInstallInput>
+<Action value="install"/>
+<Lang id="en"/>
+<XMLOutput value="StudioOutputFile.xml"/>
+<InstallationLang>
+<Language value="English"/>
+</InstallationLang>
+<NetworkSettings>
+<CentralHostName value="<%= node['hpoo9']['central']['host'] %>"/>
+<CentralHTTPPortNumber value="<%= node['hpoo9']['central']['http_port'] %>"/>
+<CentralHTTPSPortNumber value="<%= node['hpoo9']['central']['https_port'] %>"/>
+<BroadcastAddress value="<%= node['hpoo9']['central']['brdcast_ip'] %>"/>
+</NetworkSettings>
+</HPOOStudioInstallInput>

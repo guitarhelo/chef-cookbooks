@@ -1,0 +1,13 @@
+CREATE DATABASE [<%= node['sitescope']['db']['name'] %>]
+GO
+CREATE DATABASE [<%= node['sitescope']['backup_db']['name'] %>]
+GO
+CREATE LOGIN [<%= node['sitescope']['db']['user'] %>] WITH PASSWORD='<%= node['sitescope']['db']['pass'] %>'
+GO
+USE <%= node['sitescope']['db']['name'] %>;
+CREATE USER  <%= node['sitescope']['db']['user'] %> FOR LOGIN <%= node['sitescope']['db']['user'] %>;
+EXEC sp_addrolemember 'db_owner', '<%= node['sitescope']['db']['user'] %>'
+GO
+USE <%= node['sitescope']['backup_db']['name'] %>;
+EXEC sp_addrolemember 'db_owner', '<%= node['sitescope']['db']['user'] %>'
+GO

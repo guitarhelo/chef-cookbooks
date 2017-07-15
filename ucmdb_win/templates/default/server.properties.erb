@@ -1,0 +1,30 @@
+# Fri Oct 31 13:48:37 GMT 2014
+# Replay feature output
+# ---------------------
+# This file was built by the Replay feature of InstallAnywhere.
+# It contains variables that were set by Panels, Consoles or Custom Code.
+
+
+
+#Select Installation Folder
+#--------------------------
+USER_INSTALL_DIR=C:\\hp\\UCMDB\\UCMDBServer
+#USER_INSTALL_DIR=<%= @server_install_dir %>
+
+#Select Installation Type
+#------------------------
+SELECT_NEW_INSTALL=1
+SELECT_PATCH_INSTALL=0
+
+#Install Local PostgreSQL DB
+#---------------------------
+INSTALL_POSTGRESQL=0
+NO_POSTGRESQL=1
+
+#Install
+#-------
+-fileOverwrite_C\:\\hp\\UCMDB\\UCMDBServer\\UninstallerData\\Uninstall_UCMDBServer.lax=Yes
+-fileOverwrite_C\:\\hp\\UCMDB\\UCMDBServer\\UninstallerData\\resource\\iawin32.dll=Yes
+-fileOverwrite_C\:\\hp\\UCMDB\\UCMDBServer\\UninstallerData\\resource\\win64_32_x64.exe=Yes
+-fileOverwrite_C\:\\hp\\UCMDB\\UCMDBServer\\UninstallerData\\resource\\remove.exe=Yes
+

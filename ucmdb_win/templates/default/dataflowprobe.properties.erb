@@ -1,0 +1,45 @@
+# Fri Oct 31 13:48:37 GMT 2014
+# Replay feature output
+# ---------------------
+# This file was built by the Replay feature of InstallAnywhere.
+# It contains variables that were set by Panels, Consoles or Custom Code.
+
+
+#HP UCMDB Data Flow Probe Setup Type
+Setup_type_server=1
+Setup_type_client=0
+#Select Installation Folder
+USER_INSTALL_DIR=C:\\hp\\UCMDB\\DataFlowProbe
+#USER_INSTALL_DIR=<%= @dataflowprobe_install_dir %>
+#HP UCMDB Data Flow Probe Configuration
+#--------------------------------------
+UCMDB_COLL_RES=1
+BAC_COLL_RES=0
+PROBE_PARAM_1=<%= node['ucmdb']['server']['host'] %>
+PROBE_PARAM_4=<%= node['ucmdb']['dataflowprobe']['host'] %>
+PROBE_PARAM_6=<%= @hostname %>
+#UCMDB_Domain_Result=1
+UCMDB_Domain_Result=0
+
+#HP UCMDB Data Flow Probe Working Mode
+#-------------------------------------
+union=1
+2probes=0
+
+#HP UCMDB Data Flow Probe Memory Size
+#------------------------------------
+MEM_CONFIG_1=512
+MEM_CONFIG_2=1024
+
+#PostgreSQL Account Configuration
+#--------------------------------
+MAMPROBE_PASSWORD=2A2340766345404E
+MAMPROBE_PASSWORD_VER=2A2340766345404E
+ROOT_PASSWORD=2A2340766345404E
+ROOT_PASSWORD_VER=2A2340766345404E
+
+#Account Configuration for Uploading Scan Files
+#----------------------------------------------
+UPLOADSCAN_USERNAME=UploadScanFile
+UPLOADSCAN_PASSWORD=2A2340766345404E
+UPLOADSCAN_PASSWORD_VER=2A2340766345404E

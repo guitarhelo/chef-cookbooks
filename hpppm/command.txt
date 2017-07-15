@@ -1,0 +1,9 @@
+mount -t nfs 10.10.0.2:/srv/software/Hewlett-Packard/PPM/ /tmp/ppm
+
+mkdir /mnt/iso
+mount –o loop /tmp/ppm/Software_HP_PPM_9.20_Media_T5570-15086.iso /mnt/iso
+mkdir /opt/ppm/install
+cp -r /mnt/iso /opt/ppm/install
+umount /mnt/iso
+cd /opt/ppm/install
+unzip ppm-920-install.zip

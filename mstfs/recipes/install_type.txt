@@ -1,0 +1,1 @@
+tfsconfig unattend /create /type:basic /unattendfile:configbasic.ini

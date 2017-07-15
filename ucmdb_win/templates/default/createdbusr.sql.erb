@@ -1,0 +1,7 @@
+CREATE LOGIN [<%= node['ucmdb']['db']['user'] %>] WITH PASSWORD='<%= node['ucmdb']['db']['pass'] %>'
+GO
+USE <%= node['ucmdb']['db']['name'] %>;
+CREATE USER  <%= node['ucmdb']['db']['user'] %> FOR LOGIN <%= node['ucmdb']['db']['user'] %>;
+EXEC sp_addrolemember 'db_owner', '<%= node['ucmdb']['db']['user'] %>'
+GO
+

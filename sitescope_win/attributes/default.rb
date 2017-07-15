@@ -1,0 +1,19 @@
+default['sitescope']['install']['share_uri']  = "\\\\10.10.0.2\\software\\Hewlett-Packard\\SiS"
+default['sitescope']['install']['iso_file']   = "Software_HP_SiteScope_11.20_for_Windows_2008_and_Windows_2003_T8354-15014-02.zip"
+default['sitescope']['install']['setup_exe']  = "Windows_Setup\\SiteScope\\HPSiteScope_11.20_setup.exe"
+default['sitescope']['install']['version'] = '64bit' # or '32bit'
+default['sitescope']['install']['admin_pass'] = "1Q2w3e4r5t"
+default['sitescope']['install']['home_dir']   = "c:\\hp\\sitescope"
+default['sitescope']['install']['type']       = "Standalone" # or Failover,SystemHealth,LoadRunner
+default['sitescope']['install']['customFeatureSelected']       = "StandaloneFeature" # or HAFeature,SystemHealthFeature,LoadRunnerFeature
+default['sitescope']['install']['port']       = "8080"
+default['sitescope']['install']['dba_user'] ="sa" 
+default['sitescope']['install']['dba_pass'] = "!1SQLSRV123"
+
+default['sitescope']['db']['type']            = "sqlserver"
+default['sitescope']['db']['host']            = "localhost"
+default['sitescope']['db']['port']            = "1433"
+default['sitescope']['db']['pass']            = "!1SQLSRV123"
+default['sitescope']['db']['name']            = "sitescope"
+default['sitescope']['backup_db']['name']     = "sitescope_backup"
+default['sitescope']['db']['user']            = "sitescope_dba"

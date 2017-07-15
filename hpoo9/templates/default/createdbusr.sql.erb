@@ -1,0 +1,8 @@
+CREATE DATABASE [<%= node['hpoo9']['db']['name'] %>]
+GO
+CREATE LOGIN [<%= node['hpoo9']['db']['user'] %>] WITH PASSWORD='<%= node['hpoo9']['db']['pass'] %>'
+GO
+USE <%= node['hpoo9']['db']['name'] %>;
+CREATE USER  <%= node['hpoo9']['db']['user'] %> FOR LOGIN <%= node['hpoo9']['db']['user'] %>;
+EXEC sp_addrolemember 'db_owner', '<%= node['hpoo9']['db']['user'] %>'
+GO

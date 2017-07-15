@@ -1,0 +1,83 @@
+#========================================================================================
+#= Sample ovinstallparams.ini file
+#= To install SiteScope in non-interactive (silent) mode, edit this file according
+#= to your needs and place it in the same folder where HPSiteScope_11.00_setup.exe file and 
+#= "packages" folder are.
+#=
+#= For silent installation, run the installer with "-i silent" flag
+#= Example: HPSiteScope_11.00_setup.exe -i silent (Windows)
+#=          HPSiteScope_11.00_setup.bin -i silent (Unix) 
+#========================================================================================
+[installer.properties]
+setup=HPSiteScope
+licenseAgreement=true
+
+#=========================================================================================
+#= The following 2 keys specify the installation flavor:
+#=
+#= 1) For Standard (standalone) HP SiteScope installation:
+#= group=Standalone
+#= customFeatureSelected=StandaloneFeature
+#= 2) For HP SiteScope Failover installation:
+#= group=Failover
+#= customFeatureSelected=HAFeature
+#= 3) For HP System Health Installation:
+#= group=SystemHealth
+#= customFeatureSelected=SystemHealthFeature
+#= 4) For HP SiteScope for LoadRunner installation (on Windows only)
+#= group=LoadRunner
+#= customFeatureSelected=LoadRunnerFeature 
+#=========================================================================================
+group=<%= node['sitescope']['install']['type'] %>
+customFeatureSelected=<%= node['sitescope']['install']['customFeatureSelected'] %>
+#=========================================================================================
+#= [Windows only] Installation folder. The path cannot contain spaces and must end with
+#=                "SiteScope". Note: On Unix systems, SiteScope installation folder is set
+#=                to "/opt/HP/SiteScope" and cannot be changed                 
+#========================================================================================= 
+prodInstallDir=<%= node['sitescope']['install']['home_dir'] %>
+
+#=========================================================================================
+#= Specifies whether HP Operation agent should be installed
+#= Accepted values: [ yes | no ]
+#=========================================================================================
+installOperationsAgent=yes
+
+#=========================================================================================
+#= [Windows only] The name of SiteScope service
+#=========================================================================================
+serviceName=SiteScopeService
+
+#=========================================================================================
+#= [Windows only]. Specifies whether SiteScope service would be started automatically   
+#=                 after installation ends
+#= Accepted values: [ yes | no ]
+#=========================================================================================
+startService=yes
+
+#=========================================================================================
+#= Specifies the path to license file
+#=========================================================================================
+licenseFile=c:\SiteScopeLicenses.txt
+
+#=========================================================================================
+#=SiteScope user interface port
+#=========================================================================================
+port=<%= node['sitescope']['install']['port'] %>
+
+#=========================================================================================
+#= Specifies whether existing configuration would be imported from and existing
+#= configuration file or SiteScope installation
+#= Accepted values: [ IMPORT_FROM_FILE | IMPORT_FROM_FOLDER | NO_IMPORT]
+#=========================================================================================
+#importMode=IMPORT_FROM_FILE
+importMode=NO_IMPORT
+
+
+#=========================================================================================
+#= Full path to SiteScope configuration file or SiteScope installation 
+#= valid only if importMode=IMPORT_FROM_FILE or importMode=IMPORT_FROM_FOLDER
+#=========================================================================================
+#importFileName=C:\SiteScope.zip
+
+

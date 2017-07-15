@@ -1,0 +1,22 @@
+default['hpoo9']['install']['share_uri']  = "\\\\10.10.0.2\\software\\Hewlett-Packard\\HPOO"
+default['hpoo9']['install']['iso_file']   = "HPOO9000.iso.iso"
+default['hpoo9']['install']['setup_exe']  = "Windows\\Installers\\Central\\CentralInstaller64-9.00.exe"
+default['hpoo9']['install']['studio_exe'] = "Windows\\Installers\\Studio\\StudioInstaller64-9.00.exe"
+default['hpoo9']['install']['admin_pass'] = "ooadm123"
+default['hpoo9']['install']['home_dir']   = "c:\\hp\\oo9"
+default['hpoo9']['install']['type']       = "default"
+
+default['hpoo9']['db']['type']            = "sqlserver"
+default['hpoo9']['db']['host']            = "localhost"
+default['hpoo9']['db']['port']            = "1433"
+default['hpoo9']['db']['pass']            = "Dh@rm@_pa$$123"
+default['hpoo9']['db']['name']            = "dharma"
+default['hpoo9']['db']['user']            = "dharma_user"
+
+default['hpoo9']['central']['host']       = "localhost"
+default['hpoo9']['central']['http_port']  = "8080"
+default['hpoo9']['central']['https_port'] = "8443"
+default['hpoo9']['central']['brdcast_ip'] = "127.255.255.255"
+
+default['hpoo9']['cp']['iso_file']        = "HPOO9CP14.zip.zip"
+default['hpoo9']['patch']['iso_file']     = "OOPATCH9.07.0008.zip"
